@@ -1,0 +1,19 @@
+# Steps to run in Google colab
+
+# 1.Upload the unzipped code folder content
+
+#Untar 
+!tar xf transformer-ende-wmt-pyOnmt.tar.gz
+
+!pip install ctranslate2, OpenNMT-py, tensorflow_text, sentence_transformers
+
+# Run the translation script which preprocess and 
+# translates if we have different language pair
+# This also takes some time if being run on full data
+# Can be skipped, we have added the processed data
+!python translation.py 
+
+# Run the file to run all the models
+# Default is to use stored embeddings
+# Give argument as True if claculating embeddings again
+!python run.py False
